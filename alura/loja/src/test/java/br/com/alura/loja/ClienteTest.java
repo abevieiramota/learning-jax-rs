@@ -51,7 +51,7 @@ public class ClienteTest {
 	public void testaBuscaCarrinhoTrazOCarrinhoEsperado() {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("http://localhost:8080");
-		String content = target.path("/carrinhos").request().get(String.class);
+		String content = target.path("/carrinhos/1").request().get(String.class);
 
 		Carrinho carrinho = (Carrinho) new XStream().fromXML(content);
 
@@ -62,7 +62,7 @@ public class ClienteTest {
 	public void testaBuscaProjetoTrazOProjetoEsperado() {
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target("http://localhost:8080");
-		String content = target.path("/projetos").request().get(String.class);
+		String content = target.path("/projetos/1").request().get(String.class);
 
 		Projeto carrinho = (Projeto) new XStream().fromXML(content);
 
