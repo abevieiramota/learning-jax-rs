@@ -23,6 +23,9 @@ $RECYCLE.BIN/
 
 # OSX
 # =========================
+.classpath
+.project
+.settings
 
 .DS_Store
 .AppleDouble
